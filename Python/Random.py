@@ -54,29 +54,21 @@ class Random:
         else:
             return 0
 
-    # function returns a random double (0 to infty) according to an exponential distribution
+    # function returns a random double (0.22 to 0.25) according to an exponential distribution
     def Exponential(self, beta=1.):
       # make sure beta is consistent with an exponential
       if beta <= 0.:
         beta = 1.
+      R = np.exp(-0.20*beta) + ((np.exp(-0.19*beta)-np.exp(-0.20*beta))*self.rand())
 
-      
-      X = -2.
-      
-
-      while X <= 0.16 or X > 0.2:
-          R = self.rand()
-          
-
-          while R <= 0.:
-              R = self.rand()
-
-          X = -math.log(R)/beta
+      X = -np.log(R)/beta
 
       return X
 
 
     def Category6(self,wt=0.2):
+        #wt = Random.Exponential(self,beta=1)
+        #wt = 0.35
         R = self.rand()
         face = 0.
         ty = (1 - wt)/5

@@ -62,6 +62,9 @@ if __name__ == "__main__":
         doOutputFile = True
 
     if doOutputFile:
+        #wt = (1./6.)
+        #wt = random_number.Exponential(1)
+        
         outfile = open(OutputFileName, 'w')
         for e in range(0,Nexp):
             for t in range(0,Ntoss):
@@ -70,7 +73,7 @@ if __name__ == "__main__":
                     
 
                 if type == "bi":
-                    wt = random_number.Exponential(0.5)
+                    wt = random_number.Exponential(1)
                     outfile.write(str(random_number.Category6(wt))+" ")
             outfile.write(" \n")
         outfile.close()

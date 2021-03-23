@@ -99,7 +99,7 @@ plt.show()
 
 
 
-#Fair_Dice 100 trials of 200 fair coins
+
 
 
 #generate fair outcomes from random numbers
