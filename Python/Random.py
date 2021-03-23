@@ -59,7 +59,7 @@ class Random:
       # make sure beta is consistent with an exponential
       if beta <= 0.:
         beta = 1.
-      R = np.exp(-0.20*beta) + ((np.exp(-0.19*beta)-np.exp(-0.20*beta))*self.rand())
+      R = np.exp(-0.35*beta) + ((np.exp(-0.30*beta)-np.exp(-0.35*beta))*self.rand())
 
       X = -np.log(R)/beta
 
