@@ -1,6 +1,6 @@
 # PHSX815_Project2
 
-# Role of number of trials and dynamic probability in the testing ofthe bias of dice
+# Role of number of trials and dynamic probability in testing bias of a dice
 
 The codes in this repository (inside Python folder) is written to simulate fair and unfair dice and design a test statistic to test if we can distinguish the two different distributions or not. 
 
